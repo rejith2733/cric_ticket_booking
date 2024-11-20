@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>team_achievement</title>
+    <style>
+      body {
+    background-size: cover;
+   
+    background-image: url(cricket.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+    div
+    {
+        height: 200px;
+        width: 300px;
+        position: absolute;
+        left: 180px;
+        top:100px;
+        border-radius: 50px;
+        border:3px solid black;
+        padding: 3px;
+        text-align: center;
+        background-color:lightskyblue;
+
+    }
+    .container
+    {
+        padding:20px;
+    }
+    .container label {
+        font-weight:bold;
+        margin-bottom: 20px;
+        margin-top:10px;
+        height: 10px;
+        padding: auto;
+     
+
+    }
+    .container select {
+        width: 50%;
+        padding:4px;
+        margin-top: 20px;
+        height: 40px;
+        background-color: aqua;
+        border: 5px solid black;
+
+    }
+    .container input {
+        background-color:aqua;
+        border: 2px solid black;
+
+    }
+    .container button
+    {
+        background-color:aqua;
+        border: 2px solid black;
+    }
+  
+
+    </style>
+</head>
+<body>
+    <div class="container" id="div1">
+        <h3>Enter your team name:</h3> 
+         <input type="text" name="country_name" id="country_name">
+         <h3>Enter your team code:</h3>
+         <input type="text" name="country_code" id="country_code">
+         <button type="submit" id="submit" onclick="onit()">Submit</button>
+         <br><br>
+         <button type="button" id="b2" onclick="replaceDiv()">do it in another way</button>
+    </div>
+         <script>
+             function onit() {
+                var country_name = document.getElementById("country_name").value;
+                var country_code = document.getElementById("country_code").value;
+                if(country_name.toLowerCase() === "india")
+                {
+                    window.location.href="indian.html";
+                }else if(country_name.toLowerCase() === "australia")
+                {
+                    window.location.href="australia.html";
+                }else if(country_name.toLowerCase() === "australia")
+                {
+                    window.location.href="australia.html";
+                }else if(country_name.toLowerCase() === "westindies")
+                {
+                    window.location.href="west_indies.html";
+                }else if(country_name.toLowerCase() === "england")
+                {
+                    window.location.href="england.html";
+                }else if(country_name.toLowerCase() === "pakistan")
+                {
+                    window.location.href="pakistan.html";
+                }else if(country_name.toLowerCase() === "srilanka")
+                {
+                    window.location.href="srilanka.html";
+                }else if(country_name.toLowerCase() === "southafrica")
+                {
+                    window.location.href="south_africa.html";
+                }else if(country_name.toLowerCase() === "newzealand")
+                {
+                    window.location.href="new_zealand.html";
+                }else
+                {
+                    alert("Please enter a valid name..");
+                }
+
+             }
+             function replaceDiv() {
+                var newDiv=document.createElement('div');
+                newDiv.className = "container";
+            newDiv.innerHTML = ' <label>select your country</label> <br> <select id="select1"> <option value="india">india</option> <option value="australia">Australia</option><option values="westindeies">westIndies</option>  <option value="england">england</option> <option value="pakistan">pakistan</option>  <option value="srilanka">srilanka</option><option value="southafrica">southafrica</option> <option value="newzealand">newzealand</option></select> <br><br><button type="button" id="bt3" onclick="select_move()">click it</button><br><br><img >';
+                var oldDiv=document.getElementById('div1');
+                newDiv.style.opacity = 0;
+                         setTimeout(function() {
+                      newDiv.style.opacity = 1;
+                    }, 100);
+                oldDiv.parentNode.replaceChild(newDiv,oldDiv);
+             }
+               function select_move() {
+               var select_id = document.getElementById('select1').value.toLowerCase();
+                if (select_id === "india") {
+                   window.location.href = "indian.html";
+                } 
+                else if (select_id === "australia") {
+                    window.location.href = "australia.html";
+                 }
+                 else if (select_id === "westindies") {
+                      window.location.href = "west_indies.html";
+                 }
+                else if (select_id === "england") {
+                      window.location.href = "england.html";
+                 }
+                else if (select_id === "pakistan") {
+                           window.location.href = "pakistan.html";
+                  }
+                else if (select_id === "srilanka") {
+                      window.location.href = "srilanka.html";
+                }
+                 else if (select_id === "southafrica") {
+                        window.location.href = "south_africa.html";
+                }
+                else if (select_id === "newzealand") {
+                          window.location.href = "new_zealand.html";
+                 }
+                else {
+                   alert("Please enter a valid country name.");
+                   }
+             }
+    
+
+
+        </script>
+        
+         
+
+    
+    
+</body>
+</html>

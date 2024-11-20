@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INDEX_PAGE</title>
+    <style>
+        nav
+        {
+            
+            width: 100%;
+            height:40px;
+            background-color: aliceblue;
+            border:4px solid black;
+        
+           
+        }
+        ul
+        {
+           display: flex;
+           text-align: center;
+           float: right;
+          
+
+        }
+        ul li
+        {
+            margin-right: 40px;
+            text-align: center;
+            color:black;
+          
+        }
+        div
+        {
+            height:600px;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            transition: background-image 3s ease-in-out;
+        }
+        a
+        {
+            color:black;
+        }
+    </style>
+</head>
+<body >
+    <nav >
+        <ul>
+            <li><a onclick="light(event)" href="home.html">home</a></li>
+            <li><a  onclick="light(event)" href="team_achievement.html">Team_achievement</a></li>
+            <li><a  onclick="light(event)" href="upcoming_schedule.html">upcoming_schedule</a></li>
+            <li><a onclick="light(event)" href="live_score.html">live_score</a></li>
+            <li><a onclick="light(event)" href="international_rank_list.html">Internation_rank_list</a></li>
+            <li><a onclick="light(event)" href="news.html">News</a></li>
+            <li><a onclick="light(event)" href="ticket_booking_page.html">ticket_booking_page</a></li>
+            <li><a onclick="light(event)" href="ticket_updating.html">ticket_updating</a></li>
+            <li><a onclick="light(event)" href="ticket_delet.html">ticket_delete</a></li>
+        
+           </ul>
+
+    </nav>
+    <div id="background"><div>
+        <script>
+            var i=0;
+            function changeBackground() {
+              var backgrounds = [
+                'img2.jpeg',
+                'download.jpg',
+                'img3.webp',
+                'srilanaka_world_cup_wins.jpg',
+                'pakistan_world_cup_wins.jpeg',
+                'west_indies_world_cup_wins.jpeg',
+              ];
+          
+            
+              var imageUrl = backgrounds[i]; 
+              document.getElementById('background').style.backgroundImage = 'url(' + imageUrl + ')';
+              
+            
+                i++;
+                if(i === backgrounds.length)
+                {
+                    i=0;
+                }
+              
+              
+          
+            }
+          
+            changeBackground();
+          
+            setInterval(changeBackground,6000); 
+        
+            function light(event) {
+
+                event.target.style.backgroundColor = 'red';
+            }
+        </script>
+
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Live Cricket Score</title>
+<style>
+    body {
+        font-family: 'Times New Roman', Times, serif;
+        background-image: url(live_score2.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        background-attachment: fixed;
+    }
+    .container {
+        max-width: 100%;
+        
+        margin:40px;
+        left: 200px;
+        height: 100px;
+    }
+  
+    .score {
+        font-size: 24px;
+        margin-top: 20px;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>INDIA vs AUSTRALIA 1st ODI</h1>
+    <div class="score" id="liveScore1">Loading...</div>
+</div>
+<div class="container">
+    <h1>SOUTH AFRICA vs WEST INDIES 1st TEST</h1>
+    <div class="score" id="liveScore2">Loading...</div>
+</div>
+<div class="container">
+    <h1>NEW ZEALAND VS ENGLAND 1ST T20</h1>
+    <div class="score" id="liveScore3">Loading...</div>
+</div>
+<div class="container">
+    <h1>PAKISTAN VS SRILANKA  2ND ODI</h1>
+    <div class="score" id="liveScore4">Loading...</div>
+</div>
+<div class="container">
+    <h1>AFGHANISTAN VS BANGALDESH 3RD TEST</h1>
+    <div class="score" id="liveScore5">Loading...</div>
+</div>
+<script>
+    function updateScore() {
+    
+        var runs1 = Math.floor(Math.random() * 300);
+        var wickets1 = Math.floor(Math.random() * 10);
+        var overs1 = Math.floor(Math.random() * 50) + 1;
+        var runs2 = Math.floor(Math.random() * 300);
+        var wickets2 = Math.floor(Math.random() * 10);
+        var overs2 = Math.floor(Math.random() * 90) + 1;
+        var runs3 = Math.floor(Math.random() * 200);
+        var wickets3 = Math.floor(Math.random() * 10);
+        var overs3 = Math.floor(Math.random() * 20) + 1;
+        var runs4 = Math.floor(Math.random() * 300);
+        var wickets4 = Math.floor(Math.random() * 10);
+        var overs4 = Math.floor(Math.random() * 50) + 1;
+        var runs5 = Math.floor(Math.random() * 400);
+        var wickets5 = Math.floor(Math.random() * 10);
+        var overs5 = Math.floor(Math.random() * 90) + 1;
+
+        document.getElementById('liveScore1').innerHTML = "Score: " + runs1 + "/" + wickets1 + " in " + overs1 + " overs";
+        document.getElementById('liveScore2').innerHTML = "Score: " + runs2 + "/" + wickets2 + " in " + overs2 + " overs";
+        document.getElementById('liveScore3').innerHTML = "Score: " + runs3 + "/" + wickets3 + " in " + overs3 + " overs";
+        document.getElementById('liveScore4').innerHTML = "Score: " + runs4 + "/" + wickets4 + " in " + overs4 + " overs";
+        document.getElementById('liveScore5').innerHTML = "Score: " + runs5 + "/" + wickets5 + " in " + overs5 + " overs";
+    }
+
+    setInterval(updateScore, 5000);
+
+    updateScore();
+</script>
+</body>
+</html>

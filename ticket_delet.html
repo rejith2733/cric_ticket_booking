@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ticket Deleting</title>
+    <style>
+        body {
+            
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-image: URL(booking_back.webp);
+            background-position: fixed;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        form {
+            height: 250px;
+            width: 200px;
+            background-color:rgb(255, 167, 51);
+            padding: 40px;
+            margin-left: 480px;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        input,
+        label {
+            display: block;
+            margin: 10px auto;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h2>Ticket Deleting</h2>
+    <form  action="http:\\127.0.0.1\cgi-bin\ticket_delete.pl">
+        <label for="date">Date:</label>
+        <input type="date" id="date" name="date">
+        
+        <label for="team_name">Team Name:</label>
+        <input type="text" id="team_name" name="team_name1">
+        <label for="team_name">Team Name:</label>
+        <input type="text" id="team_name" name="team_name2">
+        
+        <label for="price">Price:</label>
+        <input type="number" id="price" name="price" min="0" step="any">
+        
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
